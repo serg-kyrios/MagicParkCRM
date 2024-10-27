@@ -1,0 +1,33 @@
+/* Calendar.css */
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 колонок для днів тижня */
+    gap: 5px; /* Відстань між клітинками */
+}
+
+.day-name,
+.day {
+    height: 60px; /* Фіксована висота для днів */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa; /* Колір фону для днів */
+    border: 1px solid #ddd; /* Рамка для днів */
+    font-weight: bold; /* Жирний текст */
+}
+
+.empty-day {
+    background-color: #f9f9f9; /* Колір для порожніх днів */
+}
+
+@media (max-width: 768px) {
+    .calendar-wrapper {
+        max-width: 100%; /* Адаптивна ширина для мобільних */
+    }
+
+    .day-name,
+    .day {
+        width: 100%; /* Робимо колонки адаптивними для мобільних */
+    }
+}
